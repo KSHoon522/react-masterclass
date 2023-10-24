@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import { RecoilRoot } from "recoil";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { darktheme } from "./theme";
-import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -59,7 +58,7 @@ table {
 body{
   font-family: 'Source Sans 3', sans-serif;
   background-color:${(props) => props.theme.bgColor};
-  color:${(props) => props.theme.textColor};
+  color:"black";
 }
 a{
   text-decoration:none;
